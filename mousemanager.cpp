@@ -23,17 +23,14 @@ MouseManager::~MouseManager()
 
 void MouseManager::runClickingApplication(const int& clickTime, const int& timeBetweenClicks, const QChar& type, const int& repetitions, const QChar& location, const QPoint& xy, const int& area)
 {
-    if(location.toLower() == 'c')
-    {
-        isLocation = false;
-        isArea = false;
-    } else if (location.toLower() == 'c')
+    isLocation = false;
+    isArea = false;
+
+    if (location.toLower() == 'c')
     {
         isLocation = true;
-        isArea = false;
     } else if (location.toLower() == 'r')
     {
-        isLocation = true;
         isArea = true;
     }
 
