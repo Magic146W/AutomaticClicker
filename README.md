@@ -1,19 +1,18 @@
 <a name="readme-top"></a>
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://github.com/Magic146W/Qt_FileExplorer/blob/master/LICENSE)
-
+[![Documentation](https://img.shields.io/badge/Documentation-PDF-blue.svg)](https://github.com/Magic146W/AutomaticClicker/blob/master/DOCUMENTATION.pdf)
 <br />
 <div align="center">
   <h1 align="center">C++ based Automatic Mouse Clicker</h1>
 
 Welcome to Mini Mouse Manager (MMM), a mouse automatic clicker software developed using Qt 6.6.1 and C++ and built with CMake. MMM is a tool created as a learning project, intended to streamline clicking automation on the Windows platform.<br>
 
-
   <p align="center">
-    This README provides an initial overview of the mouse automation software. More comprehensive and detailed information can be found in the documentation.
+    This README provides an initial overview of the mouse automation software. More comprehensive and detailed information can be found in the documentation (badge at the top left corner).
     <br />
   </p>
 </div>
-
+  
 <details>
   <summary><h2>Table of Contents</h2></summary>
   <ol>
