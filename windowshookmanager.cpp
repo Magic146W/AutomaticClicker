@@ -5,6 +5,13 @@
 #include "qthread.h"
 #include <QKeyEvent>
 
+/**
+ * @brief Coordinates and manages all hook-related classes, including keyboard and mouse hooks.
+ *
+ * @details Acts as a centralized manager for hook-based functionalities, overseeing keyboard and mouse hook operations.
+ * Initializes and manages instances of HookWorker and GlobalMouseHook, handles keyboard mapping, and grabs cursor locations.
+ */
+
 WindowsHookManager* WindowsHookManager::instance = nullptr;
 
 WindowsHookManager* WindowsHookManager::getInstance(QObject* parent)
@@ -49,6 +56,12 @@ WindowsHookManager::~WindowsHookManager()
     hookWorker = nullptr;
 }
 
+/**
+ * @brief Controls the hook execution status based on the hotkey dialog state.
+ *
+ * @param isOpen Indicates if a dialog window is open or closed.
+ */
+
 void WindowsHookManager::setDialogOpen(bool isOpen)
 {
     if (isOpen)
@@ -59,6 +72,12 @@ void WindowsHookManager::setDialogOpen(bool isOpen)
         hookWorkerInstance->stopHook(true);
     }
 }
+
+/**
+ * @brief Updates the virtual key code corresponding to the provided key string.
+ *
+ * @param key The string representation of the key to update the virtual key code.
+ */
 
 void WindowsHookManager::updateKeyboardVirtualKeys(const QString& key = nullptr)
 {
@@ -90,12 +109,20 @@ void WindowsHookManager::updateKeyboardVirtualKeys(const QString& key = nullptr)
     }
 }
 
+/**
+ * @brief Prepares to retrieve the cursor's location on the screen.
+ */
+
 void WindowsHookManager::prepareToGetCursorLocation()
 {
     mouseHookInstance = GlobalMouseHook::getInstance();
     connect(mouseHookInstance, &GlobalMouseHook::leftButtonClicked, this, &WindowsHookManager::getCursorLocationOnScreen);
     shouldGrabMouse = true;
 }
+
+/**
+ * @brief Retrieves the cursor's location on the screen in response to a left button click.
+ */
 
 void WindowsHookManager::getCursorLocationOnScreen()
 {
@@ -108,9 +135,6 @@ void WindowsHookManager::getCursorLocationOnScreen()
         if (GetCursorPos(&cursorPos))
         {
             emit passCursorLocation(cursorPos.x, cursorPos.y);
-        } else
-        {
-            qDebug() << "Failed to get cursor position.";
         }
     }
 }

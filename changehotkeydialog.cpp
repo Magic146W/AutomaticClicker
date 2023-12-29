@@ -4,6 +4,14 @@
 #include <QKeyEvent>
 #include <QMessageBox>
 
+/**
+ * @brief The ChangeHotkeyDialog class handles the secondary dialog responsible for changing hotkeys.
+ *
+ * @details This dialog captures keyboard input to set new hotkeys and displays a confirmation message
+ * to accept the newly set hotkey. The dialog comprises buttons to start capturing a new hotkey,
+ * cancel the operation, and accept the captured hotkey as the new input.
+ */
+
 ChangeHotkeyDialog::ChangeHotkeyDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ChangeHotkeyDialog)
@@ -26,10 +34,18 @@ ChangeHotkeyDialog::~ChangeHotkeyDialog()
     delete ui;
 }
 
+/**
+ * @brief Closes the dialog window without changing hotkey.
+ */
+
 void ChangeHotkeyDialog::on_PushButton_Cancel_clicked()
 {
     close();
 }
+
+/**
+ * @brief Updates the hotkey and closes the dialog window.
+ */
 
 void ChangeHotkeyDialog::on_PushButton_Accept_clicked()
 {
@@ -39,6 +55,10 @@ void ChangeHotkeyDialog::on_PushButton_Accept_clicked()
         close();
     }
 }
+
+/**
+ * @brief Initiates or resets the hotkey capturing process.
+ */
 
 void ChangeHotkeyDialog::on_PushButton_Start_clicked()
 {
@@ -60,6 +80,12 @@ void ChangeHotkeyDialog::on_PushButton_Start_clicked()
         }
     }
 }
+
+/**
+ * @brief Processes key events to capture the user input for setting a new hotkey.
+ *
+ * @param event The key event to be processed.
+ */
 
 void ChangeHotkeyDialog::keyPressEvent(QKeyEvent *event)
 {
@@ -146,6 +172,10 @@ void ChangeHotkeyDialog::keyPressEvent(QKeyEvent *event)
         QDialog::keyPressEvent(event);
     }
 }
+
+/**
+ * @brief Displays a help message box providing guidance on changing hotkeys.
+ */
 
 void ChangeHotkeyDialog::on_pushButton_clicked()
 {
