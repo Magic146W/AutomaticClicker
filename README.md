@@ -119,16 +119,14 @@ If you prefer using the Visual Studio IDE, ensure that you have the necessary co
 **Caution: The hotkey can be triggered even when the software is minimized and another window is selected due to the software's use of the hook system from the windows.h library.**
 
 ### Presentation
-
+Main window:
 <br>
-
-To be filled in...
- 
+![mainwindow](https://github.com/Magic146W/AutomaticClicker/assets/88307484/7c2d4e13-4aa0-43c9-9cf6-b1a90d6e6af8)
 <br>
 <br>
-
-
- 
+Hotkey dialog window:
+<br>
+ ![dialoghotkey](https://github.com/Magic146W/AutomaticClicker/assets/88307484/f6f32281-f883-4d37-a89a-08ab12c55ea6)
 <br>
 <br>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
