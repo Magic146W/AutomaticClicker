@@ -59,7 +59,7 @@ Mini Mouse Manager (MMM) is an easy-to-use mouse automatization software. With i
 
 ## Getting Started
 
-For the project to function properly, user must have either Qt Creator or Visual Studio IDE 2019 (or newer) installed on their system. These Integrated Development Environments (IDEs) provide the necessary tools and environment to compile, run, and work with the Qt_FileExplorer application seamlessly.
+For the project to function properly, user must have either Qt Creator or Visual Studio IDE 2019 (or newer) installed on their system. These Integrated Development Environments (IDEs) provide the necessary tools and environment to compile, run, and work with the AutomaticClicker application seamlessly.
 
 ### Prerequisites
 
